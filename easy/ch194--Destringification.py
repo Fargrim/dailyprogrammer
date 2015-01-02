@@ -31,35 +31,61 @@ A random
 string\"
 """
 
-
-"""
-https://docs.python.org/2.0/ref/strings.html
-
-\newline	Ignored
-\\	Backslash (\)
-\'	Single quote (')
-\"	Double quote (")
-\a	ASCII Bell (BEL)
-\b	ASCII Backspace (BS)
-\f	ASCII Formfeed (FF)
-\n	ASCII Linefeed (LF)
-\r	ASCII Carriage Return (CR)
-\t	ASCII Horizontal Tab (TAB)
-\v	ASCII Vertical Tab (VT)
-"""
-
 import sys
 
 
 escape_chars = {
-    "n": chr(10),
-    "\"": "\\\"",
-    "\'": "\\'",
-    "a": chr(7),
-    "b": chr(8),
-    "f": chr(12),
-    "r": chr(13),
-    "t": chr(9),
-    "v": chr(11),
-    "0": chr(0)
+    'n': chr(10),
+    '\"': '\"',
+    '\'': '\'',
+    '\\': '\\',
+    'a': chr(7),
+    'b': chr(8),
+    'f': chr(12),
+    'r': chr(13),
+    't': chr(9),
+    'v': chr(11),
+    '0': chr(0)
 }
+
+
+"""
+Handle bad input
+"""
+
+def bad_input(reason):
+    sys.stdout.write("Bad input! ")
+    sys.stdout.write(reason)
+    exit(1)
+
+
+
+"""
+Search the string
+"""
+
+def string_check(input_string):
+    result = ''
+    escape_flag = False
+    quote_count = 0
+    for each in input_string:
+        if not escape_flag and each == '\"':
+            quote_count += 1
+        elif not escape_flag and each == '\\':
+            escape_flag = True
+        elif not escape_flag:
+            result += each
+        elif escape_flag and each in escape_chars:
+            result += escape_chars[each]
+            escape_flag = False
+        else:
+            bad_input('Bad escape character!')
+    
+            
+    if quote_count % 2 != 0:
+        bad_input('Invalid string!')
+    
+    return result  
+
+test_string = raw_input('Enter string: ')
+sys.stdout.write(string_check(test_string))
