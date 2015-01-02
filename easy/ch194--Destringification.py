@@ -87,5 +87,10 @@ def string_check(input_string):
     
     return result  
 
+
+"""
+TODO Update code to handle multiple command line inputs
+"""
+
 test_string = raw_input('Enter string: ')
 sys.stdout.write(string_check(test_string))
