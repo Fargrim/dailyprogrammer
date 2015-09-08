@@ -31,13 +31,13 @@ for k in range(0, 25):
         plus_one = c + 1
         # handling the first entry, which has no left-hand neighbor -- assumed to be 0
         if c == 0:
-            if initial_cells_list[plus_one] == '1':
+            if initial_cells_list[plus_one] == 'X':
                 next_row = 'X'
             else:
                 next_row = ' '
         # handling the last cell, which has no right-hand neighbor -- assumed to be 0
         elif c == cell_count - 1:
-            if initial_cells_list[minus_one] == '1':
+            if initial_cells_list[minus_one] == 'X':
                 next_row += 'X'
             else:
                 next_row += ' '
