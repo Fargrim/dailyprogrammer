@@ -1,5 +1,23 @@
-initial_cells = '                                                 X                                                 '
+"""
+r/DailyProgrammer challenge 213
+Cellular Automata rule 90
 
+Input: A line of 0s and 1s
+Output: 25 states of the cellular automata following rule 90
+
+Rule 90 summary:
+Next state of a current cell in the given line is the XOR evaluation of its neighbors
+
+e.g.
+"111"	"101"	"010"	"000"	"110"	"100"	"011"	"001"
+  0	      0	      0	      0	      1	      1	      1	      1
+
+This solution assumes the neighbors on the outside edges to be 0
+
+Data is input and output using a blank space for 0 and an 'X' for 1, simply for readability.
+"""
+
+initial_cells = '                                                 X                                                 '
 
 print str(initial_cells)
 
