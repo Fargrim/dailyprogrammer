@@ -1,0 +1,6 @@
+E:\git\dailyprogrammer\easy\Challenge261\bin\Debug\Challenge261.exe.config
+E:\git\dailyprogrammer\easy\Challenge261\bin\Debug\Challenge261.exe
+E:\git\dailyprogrammer\easy\Challenge261\bin\Debug\Challenge261.pdb
+E:\git\dailyprogrammer\easy\Challenge261\obj\Debug\Challenge261.csprojResolveAssemblyReference.cache
+E:\git\dailyprogrammer\easy\Challenge261\obj\Debug\Challenge261.exe
+E:\git\dailyprogrammer\easy\Challenge261\obj\Debug\Challenge261.pdb
